@@ -1,0 +1,15 @@
+{
+    "name": "xenyo/uni_devops",
+    "description": "Devops scripts for Xenyo Uni Framework",
+    "authors": [
+        {
+            "name": "Parkle Lee",
+            "email": "parkle.lee@xenyo.com"
+        }
+    ],
+    "require": {},
+    "bin": [
+        "bin/export-db",
+        "bin/import-db"
+    ]
+}
