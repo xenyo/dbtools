@@ -1,13 +1,13 @@
-# uni_devops
+# xenyo/drupal-scripts
 
-Provides devops scripts for Xenyo Uni Framework.
+Provides reusable devops scripts for Drupal sites.
 
 ## Installation
 
 Add the library to your project:
 
 ```bash
-composer require xenyo/uni_devops
+composer require xenyo/drupal-scripts
 ```
 
 ### Note for Windows users
