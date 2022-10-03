@@ -1,20 +1,24 @@
-# xenyo/drupal-scripts
+# xenyo/uni-scripts
 
-Provides reusable devops scripts for Drupal sites.
+Provides reusable devops scripts for Xenyo Uni Framework sites.
+
+## Requirements
+
+- [Devel](https://www.drupal.org/project/devel)
 
 ## Installation
 
 Add the library to your project:
 
 ```bash
-composer require xenyo/drupal-scripts
+composer require xenyo/uni-scripts
 ```
 
 ### Note for Windows users
 
 You must run the scripts using Git Bash. They will not work in cmd or powershell. You may need to add the mysql bin directory to your PATH.
 
-## Usage
+## Scripts
 
 Make sure you `cd` to your project root before running any scripts.
 
