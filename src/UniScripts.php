@@ -6,8 +6,8 @@ use Ramsey\Uuid\Uuid;
 
 class UniScripts {
   public static function resetUuid() {
-    $yml_path = "config/sync/system.site.yml";
-    $sql_path = "database.sql";
+    $yml_path = 'config/sync/system.site.yml';
+    $sql_path = 'database.sql';
 
     // Generate a random UUID
     $uuid = Uuid::uuid4()->toString();
@@ -18,7 +18,7 @@ class UniScripts {
       echo "Error: could not read $yml_path";
       exit(1);
     }
-    $yml = preg_replace("/uuid: ?[0-9a-f-]+/", "uuid: $uuid", $yml);
+    $yml = preg_replace('/uuid: ?[0-9a-f-]+/', "uuid: $uuid", $yml);
     $yml_result = file_put_contents($yml_path, $yml);
     if ($yml_result === false) {
       echo "Error: could not write $yml_path";
@@ -31,7 +31,15 @@ class UniScripts {
       echo "Error: could not read $sql_path";
       exit(1);
     }
-    $sql = preg_replace("/('system\.site'.*\\\"uuid\\\";s:36:\\\")[0-9a-f-]+/", "$1$uuid", $sql);
+    $sql = preg_replace_callback(
+      '/\'system.site\',\'(.*)\'/',
+      function ($matches) use ($uuid) {
+        $arr = unserialize(stripslashes($matches[1]));
+        $arr['uuid'] = $uuid;
+        return '\'system.site\',\'' . addslashes(serialize($arr)) . '\'';
+      },
+      $sql
+    );
     $sql_result = file_put_contents($sql_path, $sql);
     if ($sql_result === false) {
       echo "Error: could not write $sql_path";
