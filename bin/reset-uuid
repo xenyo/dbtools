@@ -20,10 +20,14 @@ if [ -z $old_uuid ]; then
   exit 1
 fi
 
+new_uuid=$(vendor/bin/drush devel:uuid)
+
+if [ -z $new_uuid ]; then
+  echo "Error: could not generate new UUID"
+  exit 1
+fi
+
 echo "Old UUID: $old_uuid"
-
-new_uuid=$(uuidgen)
-
 echo "New UUID: $new_uuid"
 
 sed -i "s/$old_uuid/$new_uuid/gi" $yml_path
