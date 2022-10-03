@@ -1,5 +1,5 @@
 {
-    "name": "xenyo/uni_devops",
+    "name": "xenyo/uni-scripts",
     "description": "Devops scripts for Xenyo Uni Framework",
     "authors": [
         {
@@ -10,6 +10,7 @@
     "require": {},
     "bin": [
         "bin/export-db",
-        "bin/import-db"
+        "bin/import-db",
+        "bin/reset-uuid"
     ]
 }
