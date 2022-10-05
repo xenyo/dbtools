@@ -4,4 +4,4 @@ vendor/bin/drush sql:dump\
   --result-file="../database.sql"\
   --ordered-dump\
   --extra-dump="--skip-extended-insert"\
-  --structure-tables-list="cache,cache_*,history,watchdog"
+  --structure-tables-list="cache,cache_*,history,watchdog,sessions"
