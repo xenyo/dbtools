@@ -48,4 +48,18 @@ class UniScripts {
 
     echo "Updated UUID to $uuid. Please import the database and commit the changes.";
   }
+
+  public static function unignoreComposerLockfile() {
+    $gitignore = file_get_contents('.gitignore');
+    if ($gitignore === false) {
+      echo "Error: could not read .gitignore";
+      exit(1);
+    }
+    $gitignore = preg_replace('/^(\/composer\.lock)$/m', '# $1', $gitignore);
+    $gitignore_result = file_put_contents('.gitignore', $gitignore);
+    if ($gitignore_result === false) {
+      echo "Error: could not write .gitignore";
+      exit(1);
+    }
+  }
 }
