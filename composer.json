@@ -1,6 +1,6 @@
 {
-    "name": "xenyo/uni-scripts",
-    "description": "Devops scripts for Xenyo Uni Framework",
+    "name": "xenyo/uni-tools",
+    "description": "Developer tools for Xenyo Uni Framework",
     "authors": [
         {
             "name": "Parkle Lee",

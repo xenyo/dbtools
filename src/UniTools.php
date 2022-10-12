@@ -4,7 +4,7 @@ namespace Xenyo;
 
 use Ramsey\Uuid\Uuid;
 
-class UniScripts {
+class UniTools {
   public static function resetUuid() {
     $yml_path = 'config/sync/system.site.yml';
     $sql_path = 'database.sql';
