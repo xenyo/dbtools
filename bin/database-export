@@ -1,6 +1,6 @@
 #!/bin/bash
 
-composer exec -- drush sql:dump\
+vendor/bin/drush sql:dump\
   --result-file="../database.sql"\
   --ordered-dump\
   --extra-dump="--skip-extended-insert"\
