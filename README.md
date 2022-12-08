@@ -7,30 +7,33 @@ Developer tools for Xenyo Uni Framework sites.
 Add the library to your project:
 
 ```bash
-composer require xenyo/uni-scripts
+composer require xenyo/uni-tools
 ```
-
-### Notes for Windows users
-
-- You must run the scripts using Git Bash. They will not work in cmd or powershell.
-- You must add the MySQL bin directory to your PATH.
 
 ## Scripts
 
-Make sure you `cd` to your project root before running any scripts.
+`cd` to your project root before running any scripts.
 
-### export-db
+### database-export
 
 ```bash
-vendor/bin/export-db
+composer exec database-export
+```
+
+```bash
+composer exec dbe
 ```
 
 Exports the database to `database.sql`. Cache, history and watchdog and sessions tables are excluded. The database dump is stored in plain text instead of gzipped so that git can track changes efficiently.
 
-### import-db
+### database-import
 
 ```bash
-vendor/bin/import-db
+composer exec database-import
 ```
 
-Imports the database from `database.sql`. Will drop existing database before importing.
+```bash
+composer exec dbi
+```
+
+Imports the database from `database.sql`. Drops existing database before importing.
