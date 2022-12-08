@@ -8,7 +8,9 @@
         }
     ],
     "bin": [
-        "bin/export-db",
-        "bin/import-db"
+        "bin/database-export",
+        "bin/database-import",
+        "bin/dbe",
+        "bin/dbi"
     ]
 }
