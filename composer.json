@@ -8,9 +8,13 @@
         }
     ],
     "bin": [
+        "bin/database-export-zip",
         "bin/database-export",
+        "bin/database-import-zip",
         "bin/database-import",
         "bin/dbe",
-        "bin/dbi"
+        "bin/dbez",
+        "bin/dbi",
+        "bin/dbiz"
     ]
 }
