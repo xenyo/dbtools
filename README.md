@@ -1,39 +1,52 @@
-# xenyo/uni-tools
+# xenyo/dbtools
 
-Developer tools for Xenyo Uni Framework sites.
+Command line tools for importing and exporting databases on Drupal sites.
+
+## Features
+
+- DB dumps exclude cache, history and watchdog and sessions tables.
+- Option to import and export with compression (gzip).
 
 ## Installation
 
-Add the library to your project:
+Run this command in your project root to install the package:
 
 ```bash
-composer require xenyo/uni-tools
+composer require xenyo/dbtools
 ```
 
-## Scripts
+## Commands
 
-`cd` to your project root before running any scripts.
+All commands must be run from the project root.
 
-### database-export
+### Export database
 
-```bash
-composer exec database-export
 ```
-
-```bash
 composer exec dbe
 ```
 
-Exports the database to `database.sql`. Cache, history and watchdog and sessions tables are excluded. The database dump is stored in plain text instead of gzipped so that git can track changes efficiently.
+Exports the database to `database.sql`.
 
-### database-import
+### Import database
 
-```bash
-composer exec database-import
 ```
-
-```bash
 composer exec dbi
 ```
 
-Imports the database from `database.sql`. Drops existing database before importing.
+Drops existing database and imports the database from `database.sql`.
+
+### Export database (gzipped)
+
+```
+composer exec dbez
+```
+
+Exports the database to `database.sql.gz`.
+
+### Import database (gzipped)
+
+```
+composer exec dbiz
+```
+
+Drops existing database and imports the database from `database.sql.gz`.
