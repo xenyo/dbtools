@@ -1,6 +1,6 @@
 {
-    "name": "xenyo/uni-tools",
-    "description": "Developer tools for Xenyo Uni Framework",
+    "name": "xenyo/dbtools",
+    "description": "Command line tools for importing and exporting databases for Drupal sites.",
     "authors": [
         {
             "name": "Parkle Lee",
