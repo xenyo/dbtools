@@ -7,6 +7,7 @@
             "email": "parkle.lee@xenyo.com"
         }
     ],
+    "license": "GPL-2.0-or-later",
     "bin": [
         "bin/database-export-zip",
         "bin/database-export",
