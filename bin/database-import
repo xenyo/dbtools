@@ -1,5 +1,0 @@
-#!/bin/bash
-
-vendor/bin/drush sql:drop &&\
-vendor/bin/drush sql:cli < database.sql &&\
-echo 'Database imported successfully.'

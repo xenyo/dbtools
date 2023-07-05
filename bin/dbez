@@ -1,1 +1,6 @@
-database-export-zip
+#!/bin/bash
+
+vendor/bin/drush sql:dump \
+  --structure-tables-list="cache,cache_*,history,watchdog,sessions" \
+  --result-file="../database.sql" \
+  --gzip

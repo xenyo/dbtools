@@ -9,10 +9,6 @@
     ],
     "license": "GPL-2.0-or-later",
     "bin": [
-        "bin/database-export-zip",
-        "bin/database-export",
-        "bin/database-import-zip",
-        "bin/database-import",
         "bin/dbe",
         "bin/dbez",
         "bin/dbi",

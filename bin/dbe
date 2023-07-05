@@ -1,1 +1,7 @@
-database-export
+#!/bin/bash
+
+vendor/bin/drush sql:dump \
+  --structure-tables-list="cache,cache_*,history,watchdog,sessions" \
+  --ordered-dump \
+  --extra-dump="--skip-extended-insert" \
+  --result-file="../database.sql"
