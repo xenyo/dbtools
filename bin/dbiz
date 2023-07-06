@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gzip -df database.sql.gz && \
 vendor/bin/drush sql:drop && \
-gunzip < database.sql.gz | vendor/bin/drush sql:cli && \
+vendor/bin/drush sql:cli < database.sql && \
 echo -e '\033[42m\033[1;30m[success]\033[0m Database imported from ../database.sql'
