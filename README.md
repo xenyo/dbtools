@@ -22,31 +22,31 @@ All commands must be run from the project root.
 ### Export database
 
 ```
-composer exec dbe
+composer exec dbe [file]
 ```
 
-Exports the database to `database.sql`.
+Exports the database to the given file. Defaults to `database.sql`.
 
 ### Import database
 
 ```
-composer exec dbi
+composer exec dbi [file]
 ```
 
-Drops existing database and imports the database from `database.sql`.
+Drops existing database and imports the database from the given file. Defaults to `database.sql`.
 
 ### Export database (gzipped)
 
 ```
-composer exec dbez
+composer exec dbez [file]
 ```
 
-Exports the database to `database.sql.gz`.
+Exports the database to the given file. Defaults to `database.sql.gz`.
 
 ### Import database (gzipped)
 
 ```
-composer exec dbiz
+composer exec dbiz [file]
 ```
 
-Drops existing database and imports the database from `database.sql.gz`.
+Drops existing database and imports the database from the given file. Defaults to `database.sql.gz`.

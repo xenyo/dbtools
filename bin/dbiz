@@ -1,6 +1,7 @@
 #!/bin/bash
 
-gzip -dkf database.sql.gz && \
+FILENAME=${1:-database.sql.gz}
+gzip -dkf $FILENAME && \
 vendor/bin/drush sql:drop && \
-vendor/bin/drush sql:cli < database.sql && \
-echo -e '\033[42m\033[1;30m[success]\033[0m Database imported from ../database.sql'
+vendor/bin/drush sql:cli < ${FILENAME%.*} && \
+echo -e "\033[42m\033[1;30m[success]\033[0m Database imported from $FILENAME"

@@ -1,6 +1,7 @@
 #!/bin/bash
 
+FILENAME=${1:-database.sql.gz}
 vendor/bin/drush sql:dump \
   --structure-tables-list="cache,cache_*,history,watchdog,sessions" \
-  --result-file="../database.sql" \
-  --gzip
+  --result-file="../${FILENAME%.*}" && \
+gzip -k ${FILENAME%.*}
